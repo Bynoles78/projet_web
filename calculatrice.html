@@ -1,59 +1,232 @@
 <!DOCTYPE html>
-<html lang="fr"  class="bg-cover font-mono m-0 p-0 bg-[url('/src/assets/fond.jpg')]">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html
+  lang="fr"
+  class="bg-cover font-mono m-0 p-0 bg-[url('/src/assets/fond.jpg')]"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculatrice - Jeffrey Grimaud</title>
-    <link rel="stylesheet" href="src/style.css">
-    <script src='src/calc_script.js'></script>
-</head>
-<body>
-    <!-- Sommaire -->
-    <div class="text-center text-[antiquewhite] text-2xl h-24 bg-black flex items-center justify-center gap-4">
-        <a href="../index.html" class="diff_page">
-            <button class="inline-block px-5 py-2 mx-5 border-2 border-gray-400 bg-gray-200 text-gray-800 rounded shadow-[-2px_-2px_2px_#fff,2px_2px_2px_#555]">CV</button>
-        </a>
-        <a id="current">
-            <button class="inline-block px-5 py-2 mx-5 border-2 border-gray-400 bg-gray-400 rounded text-white font-bold shadow-[2px_2px_2px_#fff,-2px_-2px_2px_#555]">Calculatrice</button>
-        </a>
-        <a href="fiche_contact.html" class="diff_page">
-            <button class="inline-block px-5 py-2 mx-5 border-2 border-gray-400 bg-gray-200 text-gray-800 rounded shadow-[-2px_-2px_2px_#fff,2px_2px_2px_#555]">Me Contacter</button>
-        </a>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div
+      class="text-center text-[antiquewhite] text-2xl h-24 bg-black flex items-center justify-center gap-4"
+    >
+      <a href="../index.html" class="diff_page">
+        <button
+          class="inline-block px-5 py-2 mx-5 border-2 border-gray-400 bg-gray-200 text-gray-800 rounded shadow-[-2px_-2px_2px_#fff,2px_2px_2px_#555]"
+        >
+          CV
+        </button>
+      </a>
+      <a id="current">
+        <button
+          class="inline-block px-5 py-2 mx-5 border-2 border-gray-400 bg-gray-400 rounded text-white font-bold shadow-[2px_2px_2px_#fff,-2px_-2px_2px_#555]"
+        >
+          Calculatrice
+        </button>
+      </a>
+      <a href="fiche_contact.html" class="diff_page">
+        <button
+          class="inline-block px-5 py-2 mx-5 border-2 border-gray-400 bg-gray-200 text-gray-800 rounded shadow-[-2px_-2px_2px_#fff,2px_2px_2px_#555]"
+        >
+          Me Contacter
+        </button>
+      </a>
     </div>
-
-    <!-- Calculatrice -->
-    <div class="mt-20 mx-auto bg-[#a4d4ae] p-5 rounded-2xl w-80 shadow-2xl border-4 border-[#5e8e71] flex flex-col items-center gap-3">
-        <a href="https://www.casio.com/content/dam/casio/global/support/manuals/calculators/pdf/004-fr/f/fx-92%2B_Speciale_College_FR.pdf">
-            <img src="src/assets/Casio_logo.png" alt="CASIO" class="h-5 mb-2" />
-        </a>
-        <input id="calc-display" type="text"
-            class="w-full h-16 bg-[#dde9d5] border-2 border-inset border-[#5c775e] text-[#1f2f1f] font-bold text-3xl p-2 rounded text-right shadow-inner"
-            disabled />
-        <div class="flex gap-3 w-full">
-            <!-- Chiffres -->
-            <div class="grid grid-cols-3 gap-x-2 gap-y-4 mt-6 w-[220px]">
-                <button class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#333] text-white hover:brightness-110 transition" onclick="appendValue('7')">7</button>
-                <button class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#333] text-white hover:brightness-110 transition" onclick="appendValue('8')">8</button>
-                <button class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#333] text-white hover:brightness-110 transition" onclick="appendValue('9')">9</button>
-                <button class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#333] text-white hover:brightness-110 transition" onclick="appendValue('4')">4</button>
-                <button class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#333] text-white hover:brightness-110 transition" onclick="appendValue('5')">5</button>
-                <button class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#333] text-white hover:brightness-110 transition" onclick="appendValue('6')">6</button>
-                <button class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#333] text-white hover:brightness-110 transition" onclick="appendValue('1')">1</button>
-                <button class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#333] text-white hover:brightness-110 transition" onclick="appendValue('2')">2</button>
-                <button class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#333] text-white hover:brightness-110 transition" onclick="appendValue('3')">3</button>
-                <button class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#333] text-white hover:brightness-110 transition" onclick="appendValue('0')">0</button>
-                <button class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#bbb] text-black hover:brightness-110 transition" onclick="appendValue('.')">.</button>
-                <button class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#e67e22] text-white hover:brightness-110 transition" onclick="clearDisplay()">C</button>
-            </div>
-            <!-- Opérateurs -->
-            <div class="flex flex-col justify-between gap-2">
-                <button class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#999] text-black hover:brightness-110 transition" onclick="appendValue('+')">+</button>
-                <button class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#999] text-black hover:brightness-110 transition" onclick="appendValue('-')">−</button>
-                <button class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#999] text-black hover:brightness-110 transition" onclick="appendValue('*')">×</button>
-                <button class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#999] text-black hover:brightness-110 transition" onclick="appendValue('/')">÷</button>
-                <button class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#f1c40f] text-black hover:brightness-110 transition" onclick="calculate()">=</button>
-            </div>
+    <div
+      class="mt-20 mx-auto bg-[#a4d4ae] p-5 rounded-2xl w-80 shadow-2xl border-4 border-[#5e8e71] flex flex-col items-center gap-3"
+    >
+      <a
+        href="https://www.casio.com/content/dam/casio/global/support/manuals/calculators/pdf/004-fr/f/fx-92%2B_Speciale_College_FR.pdf"
+      >
+        <img src="src/assets/Casio_logo.png" alt="CASIO" class="h-5 mb-2" />
+      </a>
+      <input
+        id="calc-display"
+        type="text"
+        class="w-full h-16 bg-[#dde9d5] border-2 border-inset border-[#5c775e] text-[#1f2f1f] font-bold text-3xl p-2 rounded text-right shadow-inner"
+        disabled
+      />
+      <div class="flex gap-3 w-full">
+        <div class="grid grid-cols-3 gap-x-2 gap-y-4 mt-6 w-[220px]">
+          <button
+            class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#333] text-white hover:brightness-110 transition"
+            onclick="appendValue('7')"
+          >
+            7
+          </button>
+          <button
+            class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#333] text-white hover:brightness-110 transition"
+            onclick="appendValue('8')"
+          >
+            8
+          </button>
+          <button
+            class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#333] text-white hover:brightness-110 transition"
+            onclick="appendValue('9')"
+          >
+            9
+          </button>
+          <button
+            class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#333] text-white hover:brightness-110 transition"
+            onclick="appendValue('4')"
+          >
+            4
+          </button>
+          <button
+            class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#333] text-white hover:brightness-110 transition"
+            onclick="appendValue('5')"
+          >
+            5
+          </button>
+          <button
+            class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#333] text-white hover:brightness-110 transition"
+            onclick="appendValue('6')"
+          >
+            6
+          </button>
+          <button
+            class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#333] text-white hover:brightness-110 transition"
+            onclick="appendValue('1')"
+          >
+            1
+          </button>
+          <button
+            class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#333] text-white hover:brightness-110 transition"
+            onclick="appendValue('2')"
+          >
+            2
+          </button>
+          <button
+            class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#333] text-white hover:brightness-110 transition"
+            onclick="appendValue('3')"
+          >
+            3
+          </button>
+          <button
+            class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#333] text-white hover:brightness-110 transition"
+            onclick="appendValue('0')"
+          >
+            0
+          </button>
+          <button
+            class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#bbb] text-black hover:brightness-110 transition"
+            onclick="appendValue('.')"
+          >
+            .
+          </button>
+          <button
+            class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#e67e22] text-white hover:brightness-110 transition"
+            onclick="clearDisplay()"
+          >
+            C
+          </button>
         </div>
+        <div class="flex flex-col justify-between gap-2">
+          <button
+            class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#999] text-black hover:brightness-110 transition"
+            onclick="appendValue('+')"
+          >
+            +
+          </button>
+          <button
+            class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#999] text-black hover:brightness-110 transition"
+            onclick="appendValue('-')"
+          >
+            −
+          </button>
+          <button
+            class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#999] text-black hover:brightness-110 transition"
+            onclick="appendValue('*')"
+          >
+            ×
+          </button>
+          <button
+            class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#999] text-black hover:brightness-110 transition"
+            onclick="appendValue('/')"
+          >
+            ÷
+          </button>
+          <button
+            class="w-14 h-14 text-lg rounded-lg border-2 border-[#1a1a1a] font-bold shadow-[0_2px_0_#0006] bg-[#f1c40f] text-black hover:brightness-110 transition"
+            onclick="calculate()"
+          >
+            =
+          </button>
+        </div>
+      </div>
     </div>
-</body>
+    <script src="src/calc_script.js"></script>
+    <canvas
+      id="snow-canvas"
+      class="fixed top-0 left-0 w-full h-full pointer-events-none z-50"
+    ></canvas>
+    <script>
+      const canvas = document.getElementById("snow-canvas");
+      const ctx = canvas.getContext("2d");
+      let width = window.innerWidth;
+      let height = window.innerHeight;
+      canvas.width = width;
+      canvas.height = height;
+
+      window.addEventListener("resize", () => {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+      });
+
+      const snowflakes = [];
+      const SNOWFLAKE_COUNT = 80;
+
+      function randomBetween(a, b) {
+        return a + Math.random() * (b - a);
+      }
+
+      for (let i = 0; i < SNOWFLAKE_COUNT; i++) {
+        snowflakes.push({
+          x: randomBetween(0, width),
+          y: randomBetween(0, height),
+          r: randomBetween(1, 3),
+          speed: randomBetween(0.5, 2),
+          drift: randomBetween(-0.5, 0.5),
+        });
+      }
+
+      function drawSnow() {
+        ctx.clearRect(0, 0, width, height);
+        ctx.save();
+        ctx.globalAlpha = 0.8;
+        ctx.fillStyle = "#fff";
+        for (const f of snowflakes) {
+          ctx.beginPath();
+          ctx.arc(f.x, f.y, f.r, 0, 2 * Math.PI);
+          ctx.fill();
+        }
+        ctx.restore();
+      }
+
+      function updateSnow() {
+        for (const f of snowflakes) {
+          f.y += f.speed;
+          f.x += f.drift;
+          if (f.y > height) {
+            f.y = -f.r;
+            f.x = randomBetween(0, width);
+          }
+          if (f.x < 0) f.x = width;
+          if (f.x > width) f.x = 0;
+        }
+      }
+
+      function animate() {
+        drawSnow();
+        updateSnow();
+        requestAnimationFrame(animate);
+      }
+      animate();
+    </script>
+  </body>
 </html>

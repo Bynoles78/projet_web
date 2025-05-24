@@ -1,50 +1,178 @@
 <!DOCTYPE html>
-<html lang="fr"  class="bg-cover font-mono m-0 p-0 bg-[url('/src/assets/fond.jpg')]">
+<html
+  lang="fr"
+  class="bg-cover font-mono m-0 p-0 bg-[url('/src/assets/fond.jpg')]"
+>
   <head>
     <meta charset="UTF-8" />
     <title>QCM sur le CV</title>
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <!-- Sommaire -->
-    <div class="text-center text-[antiquewhite]] text-2xl h-24 bg-black flex items-center justify-center gap-4">
+    <div
+      class="text-center text-[antiquewhite]] text-2xl h-24 bg-black flex items-center justify-center gap-4"
+    >
       <a href="./index.html">
-        <button class="inline-block px-5 py-2 mx-5 border-2 border-gray-400 bg-gray-200 text-gray-800 rounded shadow-[-2px_-2px_2px_#fff,2px_2px_2px_#555]">CV</button>
+        <button
+          class="inline-block px-5 py-2 mx-5 border-2 border-gray-400 bg-gray-200 text-gray-800 rounded shadow-[-2px_-2px_2px_#fff,2px_2px_2px_#555]"
+        >
+          CV
+        </button>
       </a>
       <a href="./calculatrice.html">
-        <button class="inline-block px-5 py-2 mx-5 border-2 border-gray-400 bg-gray-200 text-gray-800 rounded shadow-[-2px_-2px_2px_#fff,2px_2px_2px_#555]">Calculatrice</button>
+        <button
+          class="inline-block px-5 py-2 mx-5 border-2 border-gray-400 bg-gray-200 text-gray-800 rounded shadow-[-2px_-2px_2px_#fff,2px_2px_2px_#555]"
+        >
+          Calculatrice
+        </button>
       </a>
       <a>
-        <button class="inline-block px-5 py-2 mx-5 border-2 border-gray-400 bg-gray-400 rounded text-white font-bold shadow-[2px_2px_2px_#fff,-2px_-2px_2px_#555]">Me Contacter</button>
+        <button
+          class="inline-block px-5 py-2 mx-5 border-2 border-gray-400 bg-gray-400 rounded text-white font-bold shadow-[2px_2px_2px_#fff,-2px_-2px_2px_#555]"
+        >
+          Me Contacter
+        </button>
       </a>
     </div>
-    <!-- ...existing code... -->
-<div class="relative max-w-lg mx-auto mt-16 p-8 rounded-3xl shadow-2xl border-4 border-[#222] overflow-hidden"
-     style="background-image: url('https://img.freepik.com/vecteurs-premium/texture-carbone-abstraite-lignes-colorees_144316-9069.jpg?semt=ais_hybrid&w=740'); background-size: cover; background-position: center;">
-  <div class="absolute inset-0 pointer-events-none z-0 bg-gradient-to-br from-[#232526]/80 via-[#18191a]/80 to-black/90"></div>
-  <h1 class="relative z-10 font-extrabold text-3xl text-center mb-6 uppercase tracking-widest bg-gradient-to-r from-[#e4002b] via-[#ffe600] to-[#222] text-transparent bg-clip-text drop-shadow-lg">
-    QUIZ - CULTURE G
-  </h1>
-  <p class="relative z-10 space-y-6 text-[#ffe600] text-center mb-4 uppercase">veuillez reussir ce quiz sur les voitures pour pourvoir me  contacter</p>
-  <div id="quizContainer" class="relative z-10 space-y-6 text-[#ffe600]"></div>
+    <div
+      class="relative max-w-lg mx-auto mt-16 p-8 rounded-3xl shadow-2xl border-4 border-[#222] overflow-hidden"
+      style="
+        background-image: url(&quot;https://img.freepik.com/vecteurs-premium/texture-carbone-abstraite-lignes-colorees_144316-9069.jpg?semt=ais_hybrid&w=740&quot;);
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <div
+        class="absolute inset-0 pointer-events-none z-0 bg-gradient-to-br from-[#232526]/80 via-[#18191a]/80 to-black/90"
+      ></div>
+      <h1
+        class="relative z-10 font-extrabold text-3xl text-center mb-6 uppercase tracking-widest bg-gradient-to-r from-[#e4002b] via-[#ffe600] to-[#222] text-transparent bg-clip-text drop-shadow-lg"
+      >
+        QUIZ - CULTURE G
+      </h1>
+      <p
+        class="relative z-10 space-y-6 text-[#ffe600] text-center mb-4 uppercase"
+      >
+        veuillez reussir ce quiz sur les voitures pour pourvoir me contacter
+      </p>
+      <div
+        id="quizContainer"
+        class="relative z-10 space-y-6 text-[#ffe600]"
+      ></div>
 
-  <div class="relative z-10 flex justify-center gap-4 mt-6">
-    <button id="validateBtn" class="bg-[#e4002b] text-[#ffe600] px-6 py-2 rounded-full font-bold shadow-lg hover:bg-[#ffe600] hover:text-[#e4002b] transition-all duration-200">Valider</button>
-    <button id="bruteForceBtn" class="bg-[#232526] text-[#ffe600] px-6 py-2 rounded-full font-bold shadow-lg hover:bg-[#ffe600] hover:text-[#232526] transition-all duration-200">BruteForce</button>
-    <button id="stopBtn" class="bg-[#ffe600] text-[#e4002b] px-6 py-2 rounded-full font-bold shadow-lg hover:bg-[#e4002b] hover:text-[#ffe600] transition-all duration-200 hidden">Stop BruteForce</button>
-  </div>
+      <div class="relative z-10 flex justify-center gap-4 mt-6">
+        <button
+          id="validateBtn"
+          class="bg-[#e4002b] text-[#ffe600] px-6 py-2 rounded-full font-bold shadow-lg hover:bg-[#ffe600] hover:text-[#e4002b] transition-all duration-200"
+        >
+          Valider
+        </button>
+        <button
+          id="bruteForceBtn"
+          class="bg-[#232526] text-[#ffe600] px-6 py-2 rounded-full font-bold shadow-lg hover:bg-[#ffe600] hover:text-[#232526] transition-all duration-200"
+        >
+          BruteForce
+        </button>
+        <button
+          id="stopBtn"
+          class="bg-[#ffe600] text-[#e4002b] px-6 py-2 rounded-full font-bold shadow-lg hover:bg-[#e4002b] hover:text-[#ffe600] transition-all duration-200 hidden"
+        >
+          Stop BruteForce
+        </button>
+      </div>
 
-  <div id="resultat" class="relative z-10 mt-6 text-center text-lg font-semibold text-[#ffe600]"></div>
+      <div
+        id="resultat"
+        class="relative z-10 mt-6 text-center text-lg font-semibold text-[#ffe600]"
+      ></div>
 
-  <div id="formulaireBtn" class="relative z-10 mt-4 text-center hidden">
-    <a href="form.html" class="bg-[#00c853] text-white px-6 py-2 rounded-full font-bold shadow-lg hover:bg-[#009624] transition-all duration-200">Continuer vers le formulaire</a>
-  </div>
+      <div id="formulaireBtn" class="relative z-10 mt-4 text-center hidden">
+        <a
+          href="form.html"
+          class="bg-[#00c853] text-white px-6 py-2 rounded-full font-bold shadow-lg hover:bg-[#009624] transition-all duration-200"
+          >Continuer vers le formulaire</a
+        >
+      </div>
 
-  <div id="restartBtn" class="relative z-10 mt-4 text-center hidden">
-    <button onclick="restartQuiz()" class="bg-[#e4002b] text-[#ffe600] px-6 py-2 rounded-full font-bold shadow-lg hover:bg-[#ffe600] hover:text-[#e4002b] transition-all duration-200">Recommencer</button>
-  </div>
-</div>
-<!-- ...existing code... -->
+      <div id="restartBtn" class="relative z-10 mt-4 text-center hidden">
+        <button
+          onclick="restartQuiz()"
+          class="bg-[#e4002b] text-[#ffe600] px-6 py-2 rounded-full font-bold shadow-lg hover:bg-[#ffe600] hover:text-[#e4002b] transition-all duration-200"
+        >
+          Recommencer
+        </button>
+      </div>
+    </div>
     <script src="src/quiz_script.js"></script>
+    <!-- Ajoute ceci juste avant </body> -->
+    <canvas
+      id="snow-canvas"
+      class="fixed top-0 left-0 w-full h-full pointer-events-none z-50"
+    ></canvas>
+    <script>
+      const canvas = document.getElementById("snow-canvas");
+      const ctx = canvas.getContext("2d");
+      let width = window.innerWidth;
+      let height = window.innerHeight;
+      canvas.width = width;
+      canvas.height = height;
+
+      window.addEventListener("resize", () => {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+      });
+
+      const snowflakes = [];
+      const SNOWFLAKE_COUNT = 80;
+
+      function randomBetween(a, b) {
+        return a + Math.random() * (b - a);
+      }
+
+      for (let i = 0; i < SNOWFLAKE_COUNT; i++) {
+        snowflakes.push({
+          x: randomBetween(0, width),
+          y: randomBetween(0, height),
+          r: randomBetween(1, 3),
+          speed: randomBetween(0.5, 2),
+          drift: randomBetween(-0.5, 0.5),
+        });
+      }
+
+      function drawSnow() {
+        ctx.clearRect(0, 0, width, height);
+        ctx.save();
+        ctx.globalAlpha = 0.8;
+        ctx.fillStyle = "#fff";
+        for (const f of snowflakes) {
+          ctx.beginPath();
+          ctx.arc(f.x, f.y, f.r, 0, 2 * Math.PI);
+          ctx.fill();
+        }
+        ctx.restore();
+      }
+
+      function updateSnow() {
+        for (const f of snowflakes) {
+          f.y += f.speed;
+          f.x += f.drift;
+          if (f.y > height) {
+            f.y = -f.r;
+            f.x = randomBetween(0, width);
+          }
+          if (f.x < 0) f.x = width;
+          if (f.x > width) f.x = 0;
+        }
+      }
+
+      function animate() {
+        drawSnow();
+        updateSnow();
+        requestAnimationFrame(animate);
+      }
+      animate();
+    </script>
   </body>
 </html>

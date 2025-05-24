@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const mail = "2017jeffrey2006@gmail.com";
     const mailSubject = encodeURIComponent(subject.value.trim());
-    const mailBody = encodeURIComponent(`Prénom : ${prenom.value.trim()}\nNom : ${nom.value.trim()}\n\n${message.value.trim()}`
+    const mailBody = encodeURIComponent(`Prénom : ${prenom.value.trim()}\nNom : ${nom.value.trim()}\nEmail : ${emailValue}\n${message.value.trim()}`
 );
 window.location.href = `mailto:${mail}?subject=${mailSubject}&body=${mailBody}`;
    });
