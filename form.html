@@ -1,23 +1,88 @@
 <!DOCTYPE html>
-<html lang="fr"  class="bg-cover font-mono m-0 p-0 bg-[url('/src/assets/fond.jpg')]">
+<html lang="fr" class="bg-cover font-mono m-0 p-0 bg-[url('/src/assets/fond.jpg')]">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Jeffrey Grimaud</title>
     <link rel="stylesheet" href="src/style.css">
-    <script src="src/CV_script.js"></script>
 </head>
 <body>
-    <div class="text-center text-[antiquewhite] text-2xl h-24 bg-black flex items-center justify-center gap-4">
-        <a id="current">
-            <button class="inline-block px-5 py-2 mx-5 border-2 border-gray-400 bg-gray-400 rounded text-white font-bold shadow-[2px_2px_2px_#fff,-2px_-2px_2px_#555]">CV</button>
-        </a>
-        <a href="calculatrice.html" class="diff_page">
-            <button class="inline-block px-5 py-2 mx-5 border-2 border-gray-400 bg-gray-200 text-gray-800 rounded shadow-[-2px_-2px_2px_#fff,2px_2px_2px_#555]">Calculatrice</button>
-        </a>
-        <a href="fiche_contact.html" class="diff_page">
-            <button class="inline-block px-5 py-2 mx-5 border-2 border-gray-400 bg-gray-200 text-gray-800 rounded shadow-[-2px_-2px_2px_#fff,2px_2px_2px_#555]">Me Contacter</button>
-        </a>
+    <div class="text-center text-[antiquewhite]] text-2xl h-24 bg-black flex items-center justify-center gap-4">
+      <a href="./index.html">
+        <button class="inline-block px-5 py-2 mx-5 border-2 border-gray-400 bg-gray-200 text-gray-800 rounded shadow-[-2px_-2px_2px_#fff,2px_2px_2px_#555]">CV</button>
+      </a>
+      <a href="./calculatrice.html">
+        <button class="inline-block px-5 py-2 mx-5 border-2 border-gray-400 bg-gray-200 text-gray-800 rounded shadow-[-2px_-2px_2px_#fff,2px_2px_2px_#555]">Calculatrice</button>
+      </a>
+      <a>
+        <button class="inline-block px-5 py-2 mx-5 border-2 border-gray-400 bg-gray-400 rounded text-white font-bold shadow-[2px_2px_2px_#fff,-2px_-2px_2px_#555]">Me Contacter</button>
+      </a>
     </div>
+<div class="relative max-w-lg mx-auto mt-7 p-8 rounded-3xl shadow-2xl border-4 border-[#222] overflow-hidden bg-[(url='https://img.freepik.com/vecteurs-premium/texture-carbone-abstraite-lignes-colorees_144316-9069.jpg?semt=ais_hybrid&w=740')]"
+  style="background-image: url('https://img.freepik.com/vecteurs-premium/texture-carbone-abstraite-lignes-colorees_144316-9069.jpg?semt=ais_hybrid&w=740'); background-size: cover; background-position: center;">
+  <div class="absolute inset-0 pointer-events-none z-0 bg-gradient-to-br from-[#232526]/80 via-[#18191a]/80 to-black/90"></div>
+  <h1 class="relative z-10 font-extrabold text-4xl text-center mb-6 uppercase tracking-widest bg-gradient-to-r from-[#e4002b] via-[#ffe600] to-[#222] text-transparent bg-clip-text drop-shadow-lg">Contactez-moi</h1>
+  <form action="mailto:2017jeffrey2006@gmail.com" method="GET" id="contactForm" class="relative z-10 flex flex-col gap-5">
+    <div class="flex gap-4">
+      <div class="flex-1">
+        <label class="flex items-center gap-2 text-[#ffe600] font-bold uppercase tracking-wide" for="prenom">
+          <svg class="w-5 h-5 text-[#e4002b]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          Prénom
+        </label>
+        <input id="prenom" name="prenom" type="text" placeholder="Prénom"
+          class="bg-[#232526]/90 text-[#ffe600] border-2 border-[#e4002b] rounded-full font-bold px-4 py-2 w-full shadow-inner focus:border-[#ffe600] focus:ring-2 focus:ring-[#ffe600] transition-all duration-200"
+          required>
+        <span id="prenomError" class="text-red-600 text-xs"></span>
+      </div>
+      <div class="flex-1">
+        <label class="flex items-center gap-2 text-[#ffe600] font-bold uppercase tracking-wide" for="nom">
+          <svg class="w-5 h-5 text-[#e4002b]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          Nom
+        </label>
+        <input id="nom" name="nom" type="text" placeholder="NOM"
+          class="bg-[#232526]/90 text-[#ffe600] border-2 border-[#e4002b] rounded-full font-bold px-4 py-2 w-full shadow-inner focus:border-[#ffe600] focus:ring-2 focus:ring-[#ffe600] transition-all duration-200"
+          required>
+        <span id="nomError" class="text-red-600 text-xs"></span>
+      </div>
+    </div>
+    <div>
+      <label class="flex items-center gap-2 text-[#ffe600] font-bold uppercase tracking-wide" for="email">
+        <svg class="w-5 h-5 text-[#e4002b]" fill="currentColor" viewBox="0 0 20 20"><path d="M2.94 6.94a1.5 1.5 0 0 1 2.12 0L10 11.88l4.94-4.94a1.5 1.5 0 1 1 2.12 2.12l-6 6a1.5 1.5 0 0 1-2.12 0l-6-6a1.5 1.5 0 0 1 0-2.12z"/></svg>
+        Email
+      </label>
+      <input id="email" name="email" type="email" placeholder="email@domaine.com"
+        class="bg-[#232526]/90 text-[#ffe600] border-2 border-[#e4002b] rounded-full font-bold px-4 py-2 w-full shadow-inner focus:border-[#ffe600] focus:ring-2 focus:ring-[#ffe600] transition-all duration-200"
+        required>
+      <span id="emailError" class="text-red-600 text-xs"></span>
+    </div>
+    <div>
+      <label class="flex items-center gap-2 text-[#ffe600] font-bold uppercase tracking-wide" for="subject">
+        <svg class="w-5 h-5 text-[#e4002b]" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8"/></svg>
+        Sujet
+      </label>
+      <input id="subject" name="subject" type="text" placeholder="La raison du message"
+        class="bg-[#232526]/90 text-[#ffe600] border-2 border-[#e4002b] rounded-full font-bold px-4 py-2 w-full shadow-inner focus:border-[#ffe600] focus:ring-2 focus:ring-[#ffe600] transition-all duration-200"
+        required>
+      <span id="subjectError" class="text-red-600 text-xs"></span>
+    </div>
+    <div>
+      <label class="flex items-center gap-2 text-[#ffe600] font-bold uppercase tracking-wide" for="message">
+        <svg class="w-5 h-5 text-[#e4002b]" fill="currentColor" viewBox="0 0 20 20"><rect width="18" height="10" x="1" y="5" rx="2"/></svg>
+        Message
+      </label>
+      <textarea id="message" name="message" rows="4" placeholder="Bonjour..."
+        class="bg-[#232526]/90 text-[#ffe600] border-2 border-[#e4002b] rounded-2xl font-bold px-4 py-2 w-full shadow-inner resize-none focus:border-[#ffe600] focus:ring-2 focus:ring-[#ffe600] transition-all duration-200"
+        required></textarea>
+      <span id="messageError" class="text-red-600 text-xs"></span>
+    </div>
+    <button type="submit" name="submit" value="Submit" onclick="alert('Envoyez votre message depuis votre client de messagerie.')" id="submitBtn"
+      class="mt-2 flex items-center justify-center gap-2 bg-gradient-to-r from-[#e4002b] to-[#ffe600] text-[#232526] text-2xl font-bold rounded-full px-8 py-3 shadow-lg hover:scale-105 hover:from-[#ffe600] hover:to-[#e4002b] transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-[#ffe600]">
+      <span>Envoyé</span>
+      <svg class="w-7 h-7 text-[#ffe600] animate-pulse" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8"/></svg>
+    </button>
+    <span id="formSuccess" class="text-[#ffe600] text-center font-semibold"></span>
+  </form>
+</div>
+    <script src="/src/form.js"></script>
 </body>
 </html>

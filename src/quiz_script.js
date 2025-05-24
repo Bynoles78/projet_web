@@ -1,12 +1,12 @@
 const questions = [
   {
-    question: "1. Laquel de ces marque existe ?",
+    question: "1. Laquelle de ces marques existe ?",
     name: "q1",
     options: { a: "lamborgamborg", b: "Koenigsegg", c: "dogde" },
     correct: "b"
   },
   {
-    question: "2. Laquel de ces marque possède une écurie F1 ?",
+    question: "2. Laquelle de ces marques possède une écurie F1 ?",
     name: "q2",
     options: { a: "Honda", b: "Monsters", c: "Williams" },
     correct: "c"
@@ -156,4 +156,3 @@ stopBtn.onclick = () => {
 window.onload = () => {
   showQuestion(currentQuestionIndex);
 };
-showQuestion(1);
