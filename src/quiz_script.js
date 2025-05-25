@@ -14,7 +14,7 @@ const questions = [
   {
     question: "3. Quelle est la voiture de serie la plus rapide du monde officiellement?",
     name: "q3",
-    options: { a: "the blue flame", b: "koenigsegg Jesko attack", c: "bugatti chiron SS 300+" },
+    options: { a: "Thrust SSC", b: "koenigsegg Jesko attack", c: "bugatti chiron SS 300+" },
     correct: "c"
   },
   {
@@ -89,14 +89,14 @@ validateBtn.onclick = () => {
 
 function finishQuiz() {
   quizContainer.innerHTML = "";
-  resultatDiv.classList.remove("text-red-600");
+  resultatDiv.classList.remove("text-red-600", "text-green-600", "text-red-400", "text-green-400", "text-[#ffe600]");
   if (score === questions.length) {
     resultatDiv.textContent = `Bravo ! Vous avez tout juste (${score}/${questions.length}).`;
-    resultatDiv.classList.add("text-green-600");
+    resultatDiv.classList.add("text-[#ffe600]");
     formulaireBtn.classList.remove("hidden");
   } else {
     resultatDiv.textContent = `Score : ${score}/${questions.length}. Vous devez recommencer.`;
-    resultatDiv.classList.add("text-red-600");
+    resultatDiv.classList.add("text-red-400");
     restartBtn.classList.remove("hidden");
   }
 }
